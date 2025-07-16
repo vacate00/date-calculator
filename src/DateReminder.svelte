@@ -9,6 +9,11 @@
     let toSolar = true;
     let reminderDate = [
         {
+            month: 1,
+            day: 1,
+            label: 'z'
+        },
+        {
             month: 3,
             day: 12,
             label: 'z'

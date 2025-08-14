@@ -12,7 +12,7 @@
         return dayjs('2025-09-17').diff(new Date(), 'days');
     }
 
-    const maps = ["电力区", "残月", "诸王峡谷", ];
+    const maps = ["电力区", "残月", "风暴点", ];
 
     function getMap() {
         const today = dayjs();

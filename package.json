@@ -13,8 +13,12 @@
     "vite": "^5.2.0"
   },
   "dependencies": {
+    "chart.js": "^4.5.1",
+    "chartjs-adapter-date-fns": "^3.0.0",
+    "date-fns": "^4.1.0",
     "dayjs": "^1.11.3",
-    "lunar-javascript": "^1.2.33"
+    "lunar-javascript": "^1.2.33",
+    "svelte-chartjs": "^3.1.5"
   },
   "volta": {
     "node": "20.11.1"

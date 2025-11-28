@@ -1,6 +1,7 @@
 <script>
     import DateCalculator from "./DateCalculator.svelte";
     import DateReminder from "./DateReminder.svelte";
+    import ChartComponent from './ChartComponent.svelte';
     import Map from "./Map.svelte";
 </script>
 
@@ -9,6 +10,9 @@
     <div class="wrap">
         <DateCalculator/>
         <DateReminder/>
+    </div>
+    <div class="chart">
+        <ChartComponent/>
     </div>
 </main>
 

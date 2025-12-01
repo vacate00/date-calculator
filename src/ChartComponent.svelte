@@ -150,13 +150,20 @@
         gap: 10px;
     }
 
-    .platform-switcher button {
-        padding: 10px 15px;
-        font-size: 16px;
-        cursor: pointer;
-        border: 1px solid #ccc;
-        border-radius: 4px;
-        background-color: #f8f8f8;
-        transition: background-color 0.3s;
-    }
+    /*.platform-switcher button {*/
+    /*    padding: 10px 15px;*/
+    /*    font-size: 16px;*/
+    /*    cursor: pointer;*/
+    /*    border: 1px solid #ccc;*/
+    /*    border-radius: 4px;*/
+    /*    background-color: #f8f8f8;*/
+    /*    transition: background-color 0.3s;*/
+    /*}*/
+
+    /*.platform-switcher button.active {*/
+    /*    background-color: #007bff;*/
+    /*    color: white;*/
+    /*    border-color: #007bff;*/
+    /*    font-weight: bold;*/
+    /*}*/
 </style>

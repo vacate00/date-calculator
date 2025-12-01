@@ -1,6 +1,6 @@
 export const initialData = {
     xiaohongshu: {
-        name: '小红书',
+        name: '',
         // Dataset 1: 粉丝数 (Followers)
         followers: [
             { x: '2025-09-01', y: 58 },

@@ -91,7 +91,7 @@
             },
             title: {
                 display: true,
-                text: `${currentStats.name} - 关键数据趋势`,
+                text: `${currentStats.name}关键数据趋势`,
                 font: {size: 18}
             },
             tooltip: {
@@ -117,12 +117,6 @@
 
 <div class="chart-container">
     <div class="platform-switcher">
-        <button
-                class:active={currentPlatform === 'xiaohongshu'}
-                on:click={() => currentPlatform = 'xiaohongshu'}
-        >
-            小红书数据
-        </button>
 <!--        <button-->
 <!--                class:active={currentPlatform === 'bilibili'}-->
 <!--                on:click={() => currentPlatform = 'bilibili'}-->
@@ -164,12 +158,5 @@
         border-radius: 4px;
         background-color: #f8f8f8;
         transition: background-color 0.3s;
-    }
-
-    .platform-switcher button.active {
-        background-color: #007bff;
-        color: white;
-        border-color: #007bff;
-        font-weight: bold;
     }
 </style>

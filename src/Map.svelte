@@ -62,12 +62,12 @@
         <div class="progress-bar">
             <div class="progress" title="{Math.round(progressPercentage)}%" style="width: {progressPercentage}%"></div>
         </div>
-        <span class="day-item">赛季结束 {seasonEndTime}天</span>
-        {#each sevenDays as day}
-            <span class="day-item">
-                {day.label}：<span class="map-name">{day.map}</span>
-            </span>
-        {/each}
+<!--        <span class="day-item">赛季结束 {seasonEndTime}天</span>-->
+<!--        {#each sevenDays as day}-->
+<!--            <span class="day-item">-->
+<!--                {day.label}：<span class="map-name">{day.map}</span>-->
+<!--            </span>-->
+<!--        {/each}-->
     </div>
 </main>
 

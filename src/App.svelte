@@ -2,11 +2,11 @@
     import DateCalculator from "./DateCalculator.svelte";
     import DateReminder from "./DateReminder.svelte";
     import ChartComponent from './ChartComponent.svelte';
-    import Map from "./Map.svelte";
+    // import Map from "./Map.svelte";
 </script>
 
 <main >
-    <Map/>
+<!--    <Map/>-->
     <div class="wrap">
         <DateCalculator/>
         <DateReminder/>

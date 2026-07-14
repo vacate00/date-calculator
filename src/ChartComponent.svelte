@@ -4,11 +4,11 @@
     import {Chart, registerables} from 'chart.js';
     // 保持 date-fns 导入，因为它仍然用于数据格式化和解析
     import 'chartjs-adapter-date-fns';
-    import {initialData} from './data.js';
+    import {DOUYIN, initialData, XHS} from './data.js';
 
     Chart.register(...registerables);
 
-    let currentPlatform = 'xiaohongshu';
+    let currentPlatform = XHS;
     let chartData;
 
     $: currentStats = initialData[currentPlatform];
@@ -38,15 +38,6 @@
             tension: 0.3,
             fill: false,
         },
-        // 3. 播放量 (仅 B 站显示)
-        ...(currentPlatform === 'bilibili' ? [{
-            label: '播放量',
-            data: currentStats.play_count.map(d => d.y),
-            borderColor: currentStats.color_pc,
-            backgroundColor: currentStats.color_pc.replace('rgb', 'rgba').replace(')', ', 0.2)'),
-            tension: 0.3,
-            fill: false,
-        }] : []),
     ];
 
     // 构造最终的 Chart.js 数据对象
@@ -117,12 +108,20 @@
 
 <div class="chart-container">
     <div class="platform-switcher">
-<!--        <button-->
-<!--                class:active={currentPlatform === 'bilibili'}-->
-<!--                on:click={() => currentPlatform = 'bilibili'}-->
-<!--        >-->
-<!--            B站数据 (含播放量)-->
-<!--        </button>-->
+        <button
+                class:active={currentPlatform === XHS}
+                on:click={() => currentPlatform = XHS}
+                disabled={currentPlatform === XHS}
+        >
+            小红书数据
+        </button>
+        <button
+                class:active={currentPlatform === DOUYIN}
+                on:click={() => currentPlatform = DOUYIN}
+                disabled={currentPlatform === DOUYIN}
+        >
+            抖音数据
+        </button>
     </div>
 
     {#key currentPlatform}
@@ -150,20 +149,24 @@
         gap: 10px;
     }
 
-    /*.platform-switcher button {*/
-    /*    padding: 10px 15px;*/
-    /*    font-size: 16px;*/
-    /*    cursor: pointer;*/
-    /*    border: 1px solid #ccc;*/
-    /*    border-radius: 4px;*/
-    /*    background-color: #f8f8f8;*/
-    /*    transition: background-color 0.3s;*/
-    /*}*/
+    .platform-switcher button {
+        padding: 4px 6px;
+        font-size: 14px;
+        cursor: pointer;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        background-color: #f8f8f8;
+        transition: background-color 0.3s;
 
-    /*.platform-switcher button.active {*/
-    /*    background-color: #007bff;*/
-    /*    color: white;*/
-    /*    border-color: #007bff;*/
-    /*    font-weight: bold;*/
-    /*}*/
+        &:disabled {
+            cursor: not-allowed;
+        }
+    }
+
+    .platform-switcher button.active {
+        background-color: #007bff;
+        color: white;
+        border-color: #007bff;
+        font-weight: bold;
+    }
 </style>

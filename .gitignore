@@ -2,3 +2,8 @@
 /dist/
 .idea
 .DS_Store
+# tsc -b 复合项目的产物（由 vite.config.ts 生成）
+/vite.config.js
+/vite.config.d.ts
+/tsconfig.tsbuildinfo
+

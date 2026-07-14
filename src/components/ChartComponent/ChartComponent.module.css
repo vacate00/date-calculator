@@ -1,0 +1,39 @@
+.container {
+  padding: 20px;
+  border: 1px solid #eee;
+  border-radius: 8px;
+  max-width: 850px;
+  margin: 0 auto;
+}
+
+.switcher {
+  margin-bottom: 20px;
+  display: flex;
+  gap: 10px;
+}
+
+.switcher button {
+  padding: 4px 6px;
+  font-size: 14px;
+  cursor: pointer;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #f8f8f8;
+  transition: background-color 0.3s;
+}
+
+.switcher button:disabled {
+  cursor: not-allowed;
+}
+
+.switcher button.active {
+  background-color: #007bff;
+  color: white;
+  border-color: #007bff;
+  font-weight: bold;
+}
+
+.chartBox {
+  height: 400px;
+  width: 800px;
+}

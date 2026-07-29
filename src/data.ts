@@ -41,6 +41,7 @@ export const initialData: Record<Platform, PlatformStats> = {
       { x: '2026-06-11', y: 166 },
       { x: '2026-06-28', y: 168 },
       { x: '2026-07-14', y: 174 },
+      { x: '2026-07-29', y: 176 },
     ],
     likes_collections: [
       { x: '2025-09-01', y: 2835 },
@@ -63,6 +64,7 @@ export const initialData: Record<Platform, PlatformStats> = {
       { x: '2026-06-11', y: 7958 },
       { x: '2026-06-28', y: 8211 },
       { x: '2026-07-14', y: 8409 },
+      { x: '2026-07-29', y: 8536 },
     ],
     color_f: 'rgb(255, 69, 0)',   // 粉丝颜色（小红书红）
     color_lc: 'rgb(255, 140, 0)', // 获赞颜色（深橙色）
@@ -71,9 +73,11 @@ export const initialData: Record<Platform, PlatformStats> = {
     name: '抖音',
     followers: [
       { x: '2026-07-14', y: 7 },
+      { x: '2026-07-29', y: 7 },
     ],
     likes_collections: [
       { x: '2026-07-14', y: 667 },
+      { x: '2026-07-29', y: 940 },
     ],
     color_f: 'rgb(0, 174, 236)',  // 粉丝颜色（B站蓝）
     color_lc: 'rgb(0, 139, 139)',  // 获赞颜色（青色）

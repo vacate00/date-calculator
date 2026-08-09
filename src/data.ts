@@ -34,12 +34,12 @@ export const initialData: Record<Platform, PlatformStats> = {
     followers: [
       { x: '2026-07-14', y: 7 },
       { x: '2026-07-29', y: 7 },
-      { x: '2026-08-29', y: 9 },
+      { x: '2026-08-09', y: 10 },
     ],
     likes_collections: [
       { x: '2026-07-14', y: 667 },
       { x: '2026-07-29', y: 940 },
-      { x: '2026-08-29', y: 1131 },
+      { x: '2026-08-09', y: 1132 },
     ],
     color_f: 'rgb(0, 174, 236)',  // 粉丝颜色（B站蓝）
     color_lc: 'rgb(0, 139, 139)',  // 获赞颜色（青色）

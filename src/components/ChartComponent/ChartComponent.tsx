@@ -15,7 +15,7 @@ const toRgba = (rgb: string) =>
   rgb.replace('rgb', 'rgba').replace(')', ', 0.2)')
 
 export default function ChartComponent() {
-  const [currentPlatform, setCurrentPlatform] = useState<Platform>(XHS)
+  const [currentPlatform, setCurrentPlatform] = useState<Platform>(DOUYIN)
 
   const currentStats: PlatformStats = useMemo(
     () => initialData[currentPlatform],
@@ -95,20 +95,19 @@ export default function ChartComponent() {
     <div className={styles.container}>
       <div className={styles.switcher}>
         <button
+            type="button"
+            className={currentPlatform === DOUYIN ? styles.active : ''}
+            onClick={() => setCurrentPlatform(DOUYIN)}
+            disabled={currentPlatform === DOUYIN}
+        >
+          抖音数据
+        </button><button
           type="button"
           className={currentPlatform === XHS ? styles.active : ''}
           onClick={() => setCurrentPlatform(XHS)}
           disabled={currentPlatform === XHS}
         >
           小红书数据
-        </button>
-        <button
-          type="button"
-          className={currentPlatform === DOUYIN ? styles.active : ''}
-          onClick={() => setCurrentPlatform(DOUYIN)}
-          disabled={currentPlatform === DOUYIN}
-        >
-          抖音数据
         </button>
       </div>
       {/* key 强制切换平台时重建 canvas，避免动画残留 */}
